@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+
+        let name = "Ivo";
+        for(let i = 0; i < 5; i++){
+            name += "Hristina" + i + " ";
+        }
+
+        document.getElementById("demo").textContent = name;
+  
+
+        // let p = document.getElementById("demo");
+
+
+        let text = "";
+        for (let i = 0; i <= 100; i+=5) {
+            text += "Числото е " + i + "<br>";
+        }
+
+        // document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>
