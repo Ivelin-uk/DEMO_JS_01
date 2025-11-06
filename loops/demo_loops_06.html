@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .delete{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Town</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ivo</td>
+            <td>30</td>
+            <td>Sofia</td>
+            <td class="delete">Delete1</td>
+        </tr>
+         <tr>
+            <td>2</td>
+            <td>Pesho</td>
+            <td>25</td>
+            <td>Pleven</td>
+            <td class="delete">Delete2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Gosho</td>
+            <td>25</td>
+            <td>Pleven</td>
+            <td class="delete">Delete3</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<script>
+    let delete_tds = document.querySelectorAll('.delete');
+    for(let i = 0; i < delete_tds.length; i++)
+    {
+        let current_delete_td = delete_tds[i];
+        current_delete_td.addEventListener('click',function(){
+            console.log(this.textContent);
+            let tr = current_delete_td.parentElement;
+            tr.remove();
+        })
+    }
+    console.log(delete_tds)
+</script>

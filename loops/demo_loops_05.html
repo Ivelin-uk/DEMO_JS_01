@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Първи параграф</p>
+    <p>Втори параграф</p>
+    <p class="demo">Трети параграф</p>
+    <p class="demo">Четвърти параграф</p>
+    <p>Пети параграф</p>
+    <p>Шести параграф</p>
+    <p class="demo">Седми параграф</p>
+    <p class="demo">Осми параграф</p>
+</body>
+</html>
+
+<script>
+    let paragraphs = document.getElementsByTagName('p');
+    for(let i = 0; i < paragraphs.length; i++)
+    {
+        let current_paragraph = paragraphs[i];
+
+        current_paragraph.addEventListener('click',function(){
+            console.log('click'); 
+            current_paragraph.style.color = 'green'; 
+        })
+
+        current_paragraph.addEventListener('mouseover',function(){
+            console.log('mouseover');  
+            current_paragraph.style.color = 'blue';
+        })
+
+        current_paragraph.addEventListener('mouseout',function(){
+            console.log('mouseout');  
+            current_paragraph.style.color = 'yellow';
+        })
+    }
+
+
+      // let paragraphs = document.getElementsByTagName('p');
+    // let paragraph_one = paragraphs[0];
+
+    // paragraph_one.style.color = 'red';
+    // paragraph_one.textContent = "WORK";
+    // paragraph_one.style.border = '1px solid red';
+
+    // paragraph_one.addEventListener('click',function(){
+    //     console.log('click'); 
+    //     paragraph_one.style.color = 'green'; 
+    // })
+
+    // paragraph_one.addEventListener('mouseover',function(){
+    //     console.log('mouseover');  
+    //     paragraph_one.style.color = 'blue';
+    // })
+
+    // paragraph_one.addEventListener('mouseout',function(){
+    //     console.log('mouseout');  
+    //     paragraph_one.style.color = 'yellow';
+    // })
+
+    // console.log(paragraph_one)
+</script>

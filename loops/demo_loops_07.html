@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Първи параграф</p>
+    <p>Втори параграф</p>
+    <p class="demo">Трети параграф</p>
+    <p class="demo">Четвърти параграф</p>
+    <p>Пети параграф</p>
+    <p>Шести параграф</p>
+    <p class="demo">Седми параграф</p>
+    <p class="demo">Осми параграф</p>
+
+    <h1 id="title">Title</h1>
+</body>
+</html>
+
+<script>
+    let paragraphs = document.getElementsByTagName('p');
+    console.log(paragraphs);
+
+    for(let i = 0; i < paragraphs.length; i++){
+        let current_paragraph = paragraphs[i];
+        current_paragraph.addEventListener('click', function(){
+            current_paragraph.remove();
+        });
+    }
+
+    let title = document.getElementById('title');
+    title.addEventListener('click',function(){
+        title.remove();
+        //document.body.style.backgroundColor ='red';
+    })
+</script>
